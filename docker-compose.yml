@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+
+  fetchapi:
+    build: ./
+    restart: always
+    command: ['server']
+    ports:
+      - 8080:8080
+    networks:
+      - local
+    environment:
+      PORT: 8080
+
+
+networks:
+  local: {}
